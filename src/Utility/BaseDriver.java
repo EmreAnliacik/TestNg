@@ -1,8 +1,12 @@
 package Utility;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -24,6 +28,29 @@ public class BaseDriver {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
         wait = new WebDriverWait(driver,Duration.ofSeconds(20));
+        loginTest();
+    }
+
+    public void loginTest() {
+
+
+
+        driver.get("https://opencart.abstracta.us/index.php?route=account/login");
+        MyFuction.Wait(2);
+
+
+        WebElement email = driver.findElement(By.cssSelector("[name='email']"));
+        email.sendKeys("campus1@gamil.com");
+
+        WebElement password = driver.findElement(By.cssSelector("[name='password']"));
+        password.sendKeys("12345");
+
+        WebElement login = driver.findElement(By.cssSelector("[value='Login']"));
+        login.click();
+
+        WebElement checkLogin = driver.findElement(By.xpath("//h2[text()='My Account']"));
+        Assert.assertTrue((checkLogin.getText()).contains("My Account"), "Failed");
+        System.out.println(checkLogin.getText());
     }
 
     @AfterClass

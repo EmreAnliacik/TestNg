@@ -24,7 +24,7 @@ public class _06_Dependency {
 
 
     // aynı seviyedeki testleri için priority verilebilir.
-}
+
 
 // bağımlı testler, direk metodundan çalıştırdığınızda bağımlı olduğu metod zincirinde
 // 1 üste kadar otomatik çağırıp çalışabilir.
