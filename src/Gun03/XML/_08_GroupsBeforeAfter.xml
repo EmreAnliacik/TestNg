@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MySuite">
+    <!-- bir calsstaki belirli bir grup testi calistirma -->
+    <test name="MyTest1">
+ <!-- hangi gruplar calistirilacak -->
+        <groups>
+            <run>
+                <include name="Regression"></include>
+
+            </run>
+        </groups>
+
+        <!-- calisacak class in yazildigi bolum -->
+        <classes>
+            <class name="Gun03._05_GroupsBeforeAfter"> </class>
+        </classes>
+
+    </test>
+
+</suite>
