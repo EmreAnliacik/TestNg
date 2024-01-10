@@ -1,0 +1,42 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MySuite" parallel="tests">
+    <!-- testler paralel calistirilmak isteniyorsa web driverdaki webdriver fonksiyonunun
+    basindaki static silinir yani public Webdriver drriver; olarak yyazilir -->
+
+    <test name="MyTest1">
+        <parameter name="text" value="mac"></parameter>
+        <parameter name="browserType" value="chrome"></parameter>
+
+        <classes>
+            <class name="Gun05._04_Soru"></class>
+        </classes>
+
+
+    </test>
+
+    <test name="MyTest2">
+        <parameter name="text" value="ipod"></parameter>
+        <parameter name="browserType" value="chrome"></parameter>
+
+        <classes>
+            <class name="Gun05._04_Soru"></class>
+        </classes>
+
+
+    </test>
+
+
+    <test name="MyTest3">
+        <parameter name="text" value="samsung"></parameter>
+        <parameter name="browserType" value="chrome"></parameter>
+
+        <classes>
+            <class name="Gun05._04_Soru"></class>
+        </classes>
+
+
+    </test>
+
+
+</suite>
