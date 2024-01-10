@@ -1,12 +1,10 @@
 package Gun05;
 
 import Utility.BaseDriver;
-import Utility.MyFuction;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.util.List;

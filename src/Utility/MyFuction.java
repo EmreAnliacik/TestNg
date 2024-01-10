@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import java.util.List;
+
 public class MyFuction {
 
     public static void Wait(int sn){
@@ -25,6 +27,21 @@ public class MyFuction {
         Assert.assertEquals((chechMessage.getText()), "Success: Your newsletter subscription has been successfully updated!");
     }
 
+
+    public static int randomGenerator(int limit) {
+        return (int) (Math.random() * limit);
+    }
+
+    public static boolean listContainsString(List<WebElement> list, String searchWord) {
+        boolean found = false;
+        for (WebElement e : list) {
+            if (e.getText().toLowerCase().equals(searchWord.toLowerCase())) {
+                found = true;
+                break;
+            }
+        }
+        return found;
+    }
 
 
 
