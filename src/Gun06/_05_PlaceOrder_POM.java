@@ -38,7 +38,7 @@ public class _05_PlaceOrder_POM extends BaseDriver {
         _04_PlaceOrder_Elements elements = new _04_PlaceOrder_Elements();
 
         elements.searchBox.sendKeys("ipod" + Keys.ENTER);
-        elements.addToChart.click();
+        elements.addToChart.get(1).click();
         elements.shoppingChart.click();
         elements.checkOut.click();
 

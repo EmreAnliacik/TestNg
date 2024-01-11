@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class _04_PlaceOrder_Elements {
 
     /**
@@ -47,11 +49,17 @@ public class _04_PlaceOrder_Elements {
     @FindBy(name = "search")
     public WebElement searchBox;
 
+    @FindBy(xpath = "//div[@class='caption']//a")
+    public List<WebElement> products;
+
     @FindBy(xpath = "//span[text()='Add to Cart']")
-    public WebElement addToChart;
+    public List<WebElement> addToChart;
 
     @FindBy(linkText = "Shopping Cart")
     public WebElement shoppingChart;
+
+    @FindBy(xpath = "//table[@class='table table-bordered']//td[@class='text-left']//a")
+    public List<WebElement> productsInShoppingCart;
 
     @FindBy(linkText = "Checkout")
     public WebElement checkOut;
