@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -74,9 +75,9 @@ public class BaseDriver {
     }
 
     @AfterMethod
-    public void afterMethod(){
+    public void afterMethod(ITestResult sonuc){//Testin sonuc ve isim bilgisini degiskenini vereyim mi
        // System.out.println("test metodu biiti");
-        logger4j.info("test metodu biiti");
+        logger4j.info(sonuc.getName()+"test metodu biiti"+" " + (sonuc.getStatus()==1 ? "passed" : "failed"));
         logger4j.warn("Warning mesaj test");
 
     }
